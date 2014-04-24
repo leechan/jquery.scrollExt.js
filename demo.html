@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery.scrollExt.js demo</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			height:2000px;
+		}
+		.title{
+			text-align: center;
+			line-height: 45px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="title">打开控制台查看输出</h1>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="jquery.scrollExt.js"></script>
+	<script>
+		$(document).on('scroll/20', function() {
+			console.log('scroll/20');
+		})
+		$(document).on('scroll/100', function() {
+			console.log('scroll/100');
+		})
+		$(document).on('scroll<300/100', function() {
+			console.log('scroll<300/100');
+		})
+	</script>
+</body>
+</html>
